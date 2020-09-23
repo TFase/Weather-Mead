@@ -22,7 +22,7 @@ form.addEventListener('submit', (e) => {
       }
       else {
         errormsg.textContent = '';
-        datamsg.textContent = 'Currently ' + data.temperature + ' degrees, with ' + data.chanceOfRain + '% chance of rain.';
+        datamsg.textContent = 'Currently ' + data.temperature + ' degrees in ' + data.location + ', with ' + data.chanceOfRain + '% chance of rain.';
       }
     });
   });

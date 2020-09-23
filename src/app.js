@@ -49,7 +49,7 @@ app.get('/weather', (req, res) => {
     });
   }
 
-  getWeather(req.query.address, (error, { currentTemp, chanceOfRain, location, stringerror } = {}) => {
+  getWeather(req.query.address, (error, { currentTemp, chanceOfRain, location } = {}) => {
 
     if (error) {
       res.send({

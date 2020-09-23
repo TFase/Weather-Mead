@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 const request = require('request');
 
 const getWeather = (address, callback) => {
@@ -18,7 +20,7 @@ const getWeather = (address, callback) => {
         currentTemp: body.current.temperature,
         chanceOfRain: body.current.precip,
         location: body.request.query
-      })
+      });
     }
 
   });
