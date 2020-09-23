@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 const form = document.querySelector('.inputform');
 const search = document.querySelector('.inputform input');
 
@@ -5,7 +7,7 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
 
   const location = search.value;
-  const url ='http://localhost:3000/weather?address=' + location;
+  const url ='/weather?address=' + location;
   const errormsg = document.querySelector('.error');
   const datamsg = document.querySelector('.data');
 
@@ -22,6 +24,6 @@ form.addEventListener('submit', (e) => {
         errormsg.textContent = '';
         datamsg.textContent = 'Currently ' + data.temperature + ' degrees, with ' + data.chanceOfRain + '% chance of rain.';
       }
-    })
+    });
   });
 });

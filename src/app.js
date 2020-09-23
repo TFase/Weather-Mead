@@ -7,6 +7,7 @@ const hbs = require('hbs');
 const getWeather = require('./utils/getweather');
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 const publicdir = path.join(__dirname, '../public');
 const partialdir = path.join(__dirname, '../views/partials');
@@ -77,6 +78,6 @@ app.get('*', (req, res) => {
  });
 });
 
-app.listen(3000, () => {
-  console.log('Now listening on 3000');
+app.listen(port, () => {
+  console.log('Now listening on ' + port);
 });
