@@ -18,7 +18,7 @@ app.use(express.static(publicdir));
 
 hbs.registerPartials(partialdir);
 
-const authorName = 'Me';
+const authorName = 'me';
 
 app.get('/', (req, res) => {
   res.render('index', {
